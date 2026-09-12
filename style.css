@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(wall.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wall-poster {
+  position: absolute;
+  top: 10%; 
+  left: 1%; 
+  width: 15%; 
+  height: auto;
+  z-index: 5; 
+  transform: rotateZ(-2deg);
+}
+
+.tv-container {
+    position: relative;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.hitbox {
+  position: absolute;
+  z-index: 20; 
+}
+
+.tv-link {
+  position: absolute;
+  top: 42.9%;
+  left: 39.2%;
+  width: 22.4%;
+  height: 30.5%;
+  transform: perspective(600px) rotateX(334.6deg) rotateY(359.9deg) rotateZ(359.4deg);
+}
+
+.main-desk {
+  max-height: 100vh; 
+  width: auto; 
+  
+  display: block; 
+}
+
+.tv-screen {
+    position: absolute;
+    top: 42.9%;
+    left: 39.2%;
+    width: 22.4%;
+    height: 30.5%;
+    object-fit: fill;
+    z-index: 10;
+    transform: perspective(600px) rotateX(334.6deg) rotateY(359.9deg) rotateZ(359.4deg);
+}
+
+.glass-overlay {
+  position: absolute;
+  
+  top: 42.9%;
+  left: 39.2%;
+  width: 22.4%;
+  height: 30.5%;
+  transform: perspective(600px) rotateX(334.6deg) rotateY(359.9deg) rotateZ(359.4deg);
+  
+  z-index: 11;
+  pointer-events: none;
+  
+  background-image: url('tv-texture.jpg'); 
+  background-size: cover;
+  background-position: center;
+  
+  opacity: .8; 
+  
+  mix-blend-mode: screen; 
+}
